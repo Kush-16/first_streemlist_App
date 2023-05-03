@@ -57,4 +57,4 @@ my_data_row = my_cur.fetchone()
 # streamlit.text("The fruitload list contains:")
 
 streamlit.header("The fruitload list contains:")
-streamlit.text(my_data_row)
+streamlit.dataframe(my_data_row)
