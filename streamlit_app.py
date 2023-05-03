@@ -84,7 +84,7 @@ except URLError as e:
 # streamlit.text("Hello from Snowflake:")
 # streamlit.text("The fruitload list contains:")
 
-streamlit.header("The fruitload list contains:")
+streamlit.header("View our fruit list - add your favorites!")
 
 # snowflake related functions
 def get_fruit_load_list():
@@ -93,7 +93,7 @@ def get_fruit_load_list():
         return my_cur.fetchall()
     
 # add button to load fruits
-if streamlit.button('Get fruit load list'):
+if streamlit.button('Get fruit list'):
     my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
     my_data_row = get_fruit_load_list()
     my_cnx.close()
